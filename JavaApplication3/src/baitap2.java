@@ -25,8 +25,9 @@ public class baitap2 {
     c = sc.nextFloat();   
     denta = b*b - 4*a*c;
     if (a == 0) {
-        if (b == 0){
-            System.out.println("phuong trinh co nghiem la:" + c);}
+        if (b == 0){ if ( c == 0) {System.out.println("phuong trinh vo so nghiem");}
+        else {
+            System.out.println("phuong trinh vo nghiem " );}}
         else { System.out.println("phuong trinh co nghiem la" + -c/b );}
         return;
     }
