@@ -28,7 +28,7 @@ public class songuyento2 {
             if (dem == 2) {
                 System.out.println("cac so ngto nho hon" + n + " la :" + i);
             }
-
+             
         }
     }
 

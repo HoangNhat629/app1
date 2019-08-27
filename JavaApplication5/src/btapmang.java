@@ -26,8 +26,7 @@ public class btapmang {
         int dem = 0;
         System.out.println("nhap phan tu can tim");
         int key = sc.nextInt();
-        System.out.println("da tim thay " + key + " o vi tri ");
-        boolean timthay = false;
+        System.out.println("da tim thay " + key + " o vi tri ");       
         for (int i = 0; i < doDai; i++) {
             if (a[i] == key) {
                 System.out.println("tim thay tai vi tri " + i);
@@ -37,33 +36,32 @@ public class btapmang {
         if (dem == 0) {
             System.out.println("k tim thay");
         } else {
-            System.out.println("tim thay" + dem + "kqua");
+            System.out.println("tim thay " + dem + " kqua");
         }      // flag 
-//        int[] data = new int[doDai];
-//        int count = 0;
-//        for (int i = 0; i < 10; i++) {
-//            data[i] = -1;
-//        }
-//        for (int i = 0; i < doDai; i++) {
-//            if (a[i] == key) {
-//                data[count] = i;
-//                count++;
-//            }
-//        }
+        int[] data = new int[doDai];
+        int count = 0;
+        for (int i = 0; i < 10; i++) {
+            data[i] = -1;
+        }
+        for (int i = 0; i < doDai; i++) {
+            if (a[i] == key) {
+                data[count] = i;
+                count++;
+            }
 
-//        System.out.println("Tim thay " + key + "o vi tri: ");
-//        for (int i = 0; i < doDai; i++) {
-//            if (i < doDai - 1) {
-//                if (data[i + 1] == -1) {
-//                    System.out.print("a[" + data[i] + "]");
-//                    break;
-//                } else  {
-//                    System.out.print("a[" + data[i] + "],");
-//                }
-//            }
-//        }  
+            System.out.println("Tim thay " + key + " o vi tri: ");
+            for (int j = 0; j < doDai; j++) {
+                if (j < doDai - 1) {
+                    if (data[j + 1] == -1) {
+                        System.out.print("a[" + data[j] + "]");
+                        break;
+                    } else {
+                        System.out.print("a[" + data[j] + "],");
+                    }
+                }
+            }
+
+        }
 
     }
-
 }
-
