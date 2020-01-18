@@ -82,6 +82,7 @@ public class tonghieu2matran {
                 tichmatrix3[i][j] = 0;
                 for (int k = 0; k < cot; k++) {
                     tichmatrix3[i][j] = tichmatrix3[i][j] + matrix[i][k] * matrix2[k][j];
+                    //tichmatrix[i][j] += matrix[i][k] * matrix2[k][j];
                 }
             }
         }

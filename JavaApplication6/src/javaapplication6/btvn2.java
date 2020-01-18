@@ -48,14 +48,20 @@ public class btvn2 {
                 max = tonghang[i];
             }
         }
-        int dem = 0;
+        
         for (int i = 0; i < hang; i++) {
             if (max == tonghang[i]) {
-                System.out.println("hang " + i + " co tong lon nhat " + tonghang[i]);
-                System.out.println(matrix[i] + "\t");
+                System.out.println("hang " + i + " co tong lon nhat " + tonghang[i]);               
             }
         }
-
+        System.out.println("");
+        for (int i = 0; i < hang; i++) {
+            for (int j = 0; j < cot; j++) {
+                if (max == tonghang[i]) {
+                    System.out.print(matrix[i][j] + "\t");
+                }
+            }
+        }
     }
 
 }

@@ -27,13 +27,18 @@ public class btvn {
             System.out.print(matrix[i] + "\t");
         }
         System.out.println("");
+        boolean flag = true;
         for (int i = 0; i < n; i++) {
-            if (matrix[i] % 2 != 0) {
-                matrix[i] = -1;
+            if (matrix[i] == matrix[n - i - 1]) {
+            } else {
+                flag = false;
             }
-            System.out.print(matrix[i] + "\t");
         }
-        System.out.println("");
+        if (flag == true) {
+            System.out.println("ma tran doi xung");
+        } else {
+            System.out.println("ma tran khong doi xung");
+        }
         int max = matrix[0];
         for (int i = 0; i < n; i++) {
             if (max < matrix[i]) {
@@ -41,19 +46,6 @@ public class btvn {
             }
         }
         System.out.println("phan tu lon nhat la:" + max);
-        System.out.println("");
-        int min = matrix[0];
-        for (int i = 0; i < n; i++) {
-            if (min > matrix[i]) {
-                min = matrix[i];
-            }
-        }
-        for (int i = 0; i < n; i++) {
-            if (matrix[i] == min) {
-                matrix[i] = -1;
-            }
-            System.out.print(matrix[i] + "\t");
-        }
         System.out.println("");
         int x;
         System.out.println("so tu nhien : ");
@@ -70,18 +62,24 @@ public class btvn {
             }
         }
         System.out.println("phan tu gan " + x + " la : " + y);
-        boolean flag = true;
+        System.out.println("");
+        int min = matrix[0];
         for (int i = 0; i < n; i++) {
-            if (matrix[0] == matrix[n]) {
-            } else {
-                flag = false;
+            if (min > matrix[i]) {
+                min = matrix[i];
             }
         }
-        if (flag = true) {
-            System.out.println("ma tran doi xung");
-        } else {
-            System.out.println("ma tran khong doi xung");
+        for (int i = 0; i < n; i++) {
+            if (matrix[i] == min) {
+                matrix[i] = -1;
+            }
+            System.out.print(matrix[i] + "\t");
+        }
+        for (int i = 0; i < n; i++) {
+            if (matrix[i] % 2 != 0) {
+                matrix[i] = -1;
+            }
+            System.out.print(matrix[i] + "\t");
         }
     }
-
 }
